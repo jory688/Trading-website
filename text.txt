@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Central</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Trading Central</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Om oss</a></li>
+        <li><a href="#market">Marknad</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Om oss</h2>
+    <p>Vi är ett community för daytraders, swingtraders och alla som vill lära sig mer om börsen.</p>
+  </section>
+
+  <section id="market">
+    <h2>Senaste marknadsdata</h2>
+    <div id="market-data">
+      <p>Laddar data...</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakta oss</h2>
+    <form>
+      <input type="text" placeholder="Ditt namn" required>
+      <input type="email" placeholder="Din e-post" required>
+      <textarea placeholder="Meddelande" required></textarea>
+      <button type="submit">Skicka</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trading Central. Alla rättigheter förbehållna.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+// Här kan du lägga in riktig data med API senare
+document.addEventListener("DOMContentLoaded", () => {
+  const marketDataDiv = document.getElementById("market-data");
+
+  // Just nu bara fejk-data:
+  const fakeData = [
+    { index: "OMXS30", value: "2 150.32", change: "+1.25%" },
+    { index: "NASDAQ", value: "15 700.42", change: "-0.45%" },
+    { index: "BTC/USD", value: "63 250", change: "+2.13%" }
+  ];
+
+  marketDataDiv.innerHTML = fakeData.map(item => `
+    <p><strong>${item.index}</strong>: ${item.value} (${item.change})</p>
+  `).join("");
+});
