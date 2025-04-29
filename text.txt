@@ -47,3 +47,9 @@
   <script src="script.js"></script>
 </body>
 </html>
+<section class="mt-4">
+  <h2>Kryptopriser i realtid</h2>
+  <div id="crypto-prices" class="p-3 bg-light rounded border">
+    Laddar priser...
+  </div>
+</section>
