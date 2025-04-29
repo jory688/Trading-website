@@ -55,3 +55,23 @@ footer {
   text-align: center;
   padding: 10px;
 }
+function fetchCryptoPrices() {
+  fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,sek")
+    .then(res => res.json())
+    .then(data => {
+      const btc = data.bitcoin;
+      const eth = data.ethereum;
+      document.getElementById("crypto-prices").innerHTML = `
+        <p><strong>Bitcoin (BTC):</strong> $${btc.usd} / ${btc.sek} SEK</p>
+        <p><strong>Ethereum (ETH):</strong> $${eth.usd} / ${eth.sek} SEK</p>
+      `;
+    })
+    .catch(() => {
+      document.getElementById("crypto-prices").innerHTML = "Fel vid hämtning av priser.";
+    });
+}
+
+// Hämta vid start
+fetchCryptoPrices();
+// Uppdatera var 60:e sekund
+setInterval(fetchCryptoPrices, 60000);
